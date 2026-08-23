@@ -1,1 +1,312 @@
-Q1. Python is a programming language that is widely used for developing software, web applications, automation scripts, artificial intelligence, machine learning, data analysis and scientific computing. It was created by Guido van Rossum and first released in 1991. Python is an interpreted high-level language known for its simple syntax and readability. It supports procedural, object-oriented and functional programming paradigms. The language provides a large standard library and popular frameworks such as Django, Flask, NumPy, Pandas, TensorFlow and PyTorch. Features like inheritance, polymorphism, abstraction and encapsulation help developers build reusable software. Python programs can run on Windows, Linux and macOS. Q2. Data Structures and Algorithms (DSA) deals with efficient organization and processing of data. Common data structures include Arrays, Linked Lists, Stacks, Queues, Trees, Graphs, Heaps and Hash Tables. Algorithms are step-by-step procedures used to solve computational problems. Searching techniques include Linear Search and Binary Search while sorting algorithms include Bubble Sort, Merge Sort, Quick Sort, Heap Sort and Insertion Sort. Time complexity is measured using Big O notation such as O(1), O(log n), O(n), O(n log n) and O(n²). Concepts like Recursion, Dynamic Programming, Divide and Conquer, Greedy Algorithms, BFS and DFS are widely used in competitive programming and technical interviews. Students should compare time complexity before selecting an algorithm because an efficient solution reduces execution time and memory consumption. Q3. Processor Architecture describes the internal structure of a CPU and the way instructions are executed. A processor contains an Arithmetic Logic Unit (ALU), Control Unit (CU), Registers, Cache Memory and Buses. The instruction cycle consists of Fetch, Decode, Execute, Memory Access and Write Back stages. Modern processors improve performance using pipelining, superscalar execution, branch prediction and out-of-order execution. RISC and CISC are two major processor architectures. ARM processors are based on RISC whereas Intel x86 processors mainly follow CISC architecture. Multi-core processors execute multiple threads simultaneously and cache memory reduces memory access time by storing frequently used data close to the CPU. Q4. Physics is the branch of science that studies matter, energy, motion and the interactions between them. Newton's laws of motion explain the relationship between force and acceleration while the law of gravitation describes the attraction between masses. Work, power and energy are fundamental concepts in mechanics. Kinetic energy depends on the motion of an object whereas potential energy depends on its position. Electricity includes concepts such as current, voltage, resistance and Ohm's law. Magnetism explains the behavior of magnetic fields and electromagnetic induction forms the basis of electric generators and transformers. Light exhibits both wave and particle properties and optics includes reflection, refraction, lenses and mirrors. Sound is a mechanical wave that requires a medium for propagation while electromagnetic waves can travel through vacuum. Q5. Chemistry is the scientific study of matter, its composition, properties and chemical reactions. Matter exists in the form of solids, liquids and gases. Atoms consist of protons, neutrons and electrons, and elements combine to form compounds through chemical bonding. The periodic table classifies elements based on atomic number and electronic configuration. Chemical reactions involve reactants converting into products while obeying the law of conservation of mass. Acids donate hydrogen ions whereas bases accept them, and the pH scale measures acidity and alkalinity. Organic chemistry focuses on carbon compounds including hydrocarbons, alcohols, aldehydes and carboxylic acids. Inorganic chemistry studies metals, salts and minerals. Concepts such as oxidation, reduction, catalysts, equilibrium, electrochemistry and polymers are important in industrial applications. End of sample Page 12 Chapter 5 Programming Computer Organization Physics Chemistry Revision Notes Fig 3.2 Table 4.1 continued on next page OCR scan quality medium some words may overlap due to page fold.
+Q.1
+
+A data structure is a way of storing and organizing data in a computer so that it can be accessed, processed, retrieved, and updated efficiently. It helps manage large amounts of data and improves the performance of programs and software systems.
+
+► Types of Data Structures
+
+Data structures are mainly classified into the following types:-
+
+1] Linear Data Structure
+
+→ Data elements are arranged sequentially, where each element is connected to its previous and next elements. → Easy to traverse in single pass. → Eg.: Array, Linked list, Stack, Queue.
+
+2] Non Linear Data Structure
+
+→ Data elements are not arranged sequentially. → Elements are connected in a hierarchical or network like manner. → Cannot traverse all elements in a single sequential run. → Eg.: Tree, graph.
+
+<|im_
+
+Static Data Structure
+
+→ The size is fixed when data structure is created → Memory allocation remains constant throughout execution → Easier to access elements. → Eg: Array.
+
+1. Dynamic Data Structure
+
+→ The size can change during program execution. → Memory is allocated or deallocated as needed making it more memory-efficient. → Eg: Stack, Queue.
+
+Common data structures:
+
+1. Array
+2. Linked list
+3. Stack
+4. Queue
+5. Tree
+6. Binary Search Tree (BST)
+7. Graph.
+
+Page 1   Fig 1.1   Table 2.3   Revision Notes
+
+1991 was the year mentioned in an example. 3600 and 4000 are memory-address-like values. 90 is a numeric value and must not be interpreted as a question number.
+
+Q.2.
+
+An algorithm is a finite set of well defined steps or instructions designed to solve a problem or perform computation. It is a procedure for solving a mathematical or computational problem in a finite number of steps.
+
+Characteristics of good Algorithm.
+
+i) Clear & Unambiguous - Every step should be precise & have only one meaning.
+
+ii) Well Defined Inputs - It may take zero or more inputs, & all inputs should be clearly specified.
+
+iii) Well Defined Outputs - It must produce at least one clearly defined output.
+
+iv) Finiteness - The algorithm must terminate after a finite number of steps.
+
+v) Effectiveness - Each operation should be basic and feasible to execute.
+
+vi) Deterministic - For the same valid input, the algorithm should produce the same result.
+
+vii) Language Independent - The logic of an algorithm should not depend on a specific programming language.
+
+1. Input
+2. Output
+3. Definiteness
+4. Finiteness
+5. Effectiveness
+6. Correctness
+
+These numbered points are characteristics inside the answer and are not question markers.
+
+Q.3) → Complexity analysis is defined as a technique to characterize the time taken by an algorithm with respect to input size. It is used for evaluating the variations of execution time on different algorithms.
+
+Types of Complexity Analysis -
+
+1. Time Complexity. Measures the amount of time or number of operations our an algorithm takes to execute. It is usually expressed using Big-O notation.
+
+2. Space Complexity. Measures the amount of memory acquired by an algorithm during execution. It includes memory occupied for variables, data structures and auxiliary space.
+
+Examples: O(1), O(log n), O(n), O(n log n), O(n^2).
+
+Best case - minimum resources required.
+Average case - expected resources required.
+Worst case - maximum resources required.
+
+Fig. 3.2 Complexity graph
+Table 4.1 continued on next page
+Page 12
+Chapter 5
+
+Q.4) → Array - An array is a linear data structure that stores a collection of elements of same datatype in contiguous memory locations. Each element is accessed using an index.
+
+Array = [10, 20, 30, 40, 50] → index position
+
+Linked List - A Linked List is a fundamental data structure in computer science. It mainly allows efficient insertion and deletion operation compared to arrays.
+
+A Linked List is a linear data structure in which elements are stored in separate memory locations and connected using links as pointers.
+
+Each element is called node. A node generally contains 1) data 2) Next node.
+
+head → [5 | 3600] → [3 | 4000] → [5 | 4400] → [90 | Null]
+
+Pointer
+Null
+
+Q. 7
+
+This marker is intentionally non-sequential. The supplied question paper only contains Q1 to Q4. This content should not be silently mapped to a canonical question.
+
+An answer may contain a number such as 1977, 2001, 2024, 100, 50, or 10. These are values and not necessarily question identifiers.
+
+Q.2)
+
+The student has returned to Question 2 after another question. An algorithm is a sequence of steps used to solve a problem. This is a duplicate Q2 marker and should be preserved and flagged rather than overwriting the earlier Q2 answer.
+
+Q9) This is an unknown question marker. The canonical question paper does not define Q9.
+
+ANS 10
+
+This is an answer continuation where "10" is related to the answer/marks and is not a question number.
+
+1. Static data structure
+2. Dynamic data structure
+3. Linear data structure
+4. Non-linear data structure
+
+The numbered list above is internal answer content.
+
+Q. 1)
+
+A data structure organizes data efficiently. This is another occurrence of Q1 after Q4. Questions do not necessarily appear in numerical order.
+
+Q-3)
+
+Complexity analysis studies how time and memory requirements grow with input size.
+
+Q3 EG
+
+OCR may have captured extra characters next to the question marker. Complexity analysis includes time complexity and space complexity.
+
+Q I)
+
+OCR may confuse a Roman numeral with a question marker. The surrounding content should be checked before assigning a question ID.
+
+1→ An algorithm is a finite sequence of instructions used to solve a problem. This weak numeric marker may represent Question 1, but the content must be validated.
+
+Q-7) This non-standard separator is an OCR variation. The number 7 should not be accepted as a canonical question unless the question paper contains Q7.
+
+Q.4.
+
+Array and linked list are both linear data structures. Arrays provide direct indexed access while linked lists use nodes and references.
+
+Q4)
+
+This is a second Q4 answer block. It may be a duplicate, continuation, or accidental repeated marker.
+
+No question marker here. A data structure is a method of organizing data. It may belong to Q1, but the question number is missing because OCR may have failed to capture the handwritten marker.
+
+The answer continues on the next scanned page without a new question marker. Arrays use contiguous memory while linked lists use non-contiguous memory.
+
+End of Page 3
+Page 4
+Chapter 2
+Fig 5.1
+Table 6.2
+continued on next page
+
+Q2
+
+An algorithm may have zero or more inputs and should produce a clearly defined output. The steps should be finite, definite, effective and understandable.
+
+Q2
+
+This is another repeated marker later in the answer sheet. Do not assume the first Q2 and this Q2 are the same block without checking source offsets and boundaries.
+
+1991. Python was first released in 1991.
+3600 seconds is one hour.
+4000 is a numeric value.
+90 marks is a numeric phrase.
+Fig 3.2 shows a diagram.
+Table 4.1 shows comparison data.
+Page 12 contains revision notes.
+
+1. First point
+2. Second point
+3. Third point
+4. Fourth point
+5. Fifth point
+
+These are numbered answer points, not questions.
+
+Q1 : A data structure can be classified into linear and non-linear structures.
+
+Q 2 : An algorithm is a finite sequence of well-defined instructions.
+
+Q 3 : Complexity analysis measures time and space requirements.
+
+Q 4 : Array and linked list differ in memory allocation and access methods.
+
+Q5? OCR uncertainty: this may be a handwritten question marker or ordinary text. Since Q5 is absent from the canonical paper, route it for review.
+
+Q 1 0
+
+This may be OCR corruption of a marker, a value, or a phrase. Do not automatically create Q10.
+
+10. This is a normal numeric value at the start of a line, not necessarily a question.
+
+10) Another numeric line that may be a list item rather than Question 10.
+
+Q10) This is explicitly written as Q10, but Q10 does not exist in the canonical question paper. Preserve it as unresolved.
+
+Question No. 3
+
+This is a long-form question marker. It should be normalized only if the parser/model recognizes it confidently.
+
+Question No 4.
+
+This is another long-form marker variation.
+
+Que. 2) OCR variation for Question 2.
+
+Que 3. OCR variation for Question 3.
+
+Question 4 - OCR variation for Question 4.
+
+Q/1 This marker may be OCR corruption. Do not assume it is a valid question without context.
+
+Q=2 This marker may be OCR corruption. Validate semantically.
+
+Q:3 This may be a question marker or punctuation. Use context.
+
+Q..4 This is noisy OCR punctuation around a likely question marker.
+
+[Q1] This is a bracketed question marker.
+
+(Q2) This is a parenthesized question marker.
+
+Q(3) This is a malformed question marker.
+
+Q-4) Another separator variation.
+
+Q 1) Spaces occur between Q and the number.
+
+Q    2) Multiple spaces occur between Q and the number.
+
+Q\t3) OCR may contain tab-like spacing.
+
+Q.   4) OCR may contain irregular spacing.
+
+<|im_ The OCR engine inserted a special token here. It must not create a question boundary.
+
+<|im_ Q1 The special token appears next to a valid marker.
+
+Q2 <|im_ The special token appears inside answer content.
+
+[OCR_NOISE] [UNCLEAR] [BLURRED] are OCR diagnostics and should not become questions.
+
+The answer contains formula-like text: O(n^2), O(log n), A[0], B[1], x=10, y=90, 5/10, 3.2, 4.1.
+
+The answer contains decimal values: 3.14, 2.5, 10.0, 0.5.
+
+The answer contains dates: 12/08/2026, 2024-25, 1991.
+
+The answer contains page-like references: 12, 13, Page 14, Pg. 15.
+
+The answer contains figure references: Fig 3.2, Figure 4.1, Fig. 5.
+
+The answer contains table references: Table 2.1, Table 4.1, Tbl 5.
+
+The answer contains marks-like text: [10 Marks], 10M, 5 marks, 10/10.
+
+The answer contains code-like content:
+for i in range(10):
+    print(i)
+
+This must remain answer content.
+
+The answer contains headings:
+1. Introduction
+2. Definition
+3. Advantages
+4. Disadvantages
+
+These are headings/list numbers inside an answer.
+
+Q1) Short answer.
+
+Q2) 
+
+Q3) The answer marker is present but the answer is extremely short.
+
+Q4) [diagram omitted by OCR]
+
+Q1) A very long answer begins here and continues across multiple OCR pages. It contains Q-like text such as "Q1 is commonly used as an example" inside the prose. The phrase "Q2" mentioned here is a reference to another question, not a new answer boundary.
+
+For example, the student may write: "In Q2, an algorithm is defined as..." This occurrence of Q2 is inside the sentence and must not split the current answer.
+
+Similarly, "Question 3 discusses complexity" is a reference inside the answer, not a new question boundary.
+
+Q2) Actual question boundary after the previous long answer.
+
+A student may also write "Q1)" inside a quoted example or code block. This should not automatically be interpreted as a new boundary without structural/context validation.
+
+Q.3) The student skipped Q2 on this page and returned to Q3.
+
+Q.1) Another Q1 marker appears later.
+
+Q4) Final answer.
+
+Final page footer: End of sample Page 12 Chapter 5 Programming Computer Organization Physics Chemistry Revision Notes Fig 3.2 Table 4.1 continued on next page OCR scan quality medium some words may overlap due to page fold.
+
+No marker at the end. This trailing content should remain unmapped or be attached to the preceding block according to source order and confidence.
+
+<|im_ <|im_ <|im_ OCR garbage at end of document.

@@ -40,7 +40,7 @@ class QuestionSegmenter:
 
         matches = list(iter_question_matches(normalized))
         if not matches:
-            return {"UNKNOWN": normalized}
+            return {"UNKNOWN": re.sub(r"\s+", " ", normalized).strip()}
 
         answers: OrderedDict[str, str] = OrderedDict()
 
@@ -48,7 +48,7 @@ class QuestionSegmenter:
             start = match.start()
             end = matches[index + 1][0].start() if index + 1 < len(matches) else len(normalized)
             answer_text = normalized[match.end():end]
-            answer = self._clean_answer(answer_text)
+            answer = self._clean_answer(answer_text, "\n" not in normalized[match.start():match.end() + 1])
 
             if answer:
                 self._store_answer(answers, question_id, answer)
@@ -58,11 +58,11 @@ class QuestionSegmenter:
 
         return dict(answers)
 
-    def _clean_answer(self, answer_text: str) -> str:
+    def _clean_answer(self, answer_text: str, same_line: bool = True) -> str:
         cleaned = (answer_text or "").strip()
         if not cleaned:
             return ""
-        if re.match(r"^(?:In\s+your\s+own\s+words,\s*)?(?:Explain|Describe|Define|State|List|What\s+is|What\s+are|Why|How|When|Where|Who|Which)\b", cleaned, re.IGNORECASE):
+        if same_line and re.match(r"^(?:In\s+your\s+own\s+words,\s*)?(?:Explain|Describe|Define|State|List|What\s+is|What\s+are|Why|How|When|Where|Who|Which)\b", cleaned, re.IGNORECASE):
             cleaned = strip_question_prompt(cleaned)
         return re.sub(r"\s+", " ", cleaned).strip()
 

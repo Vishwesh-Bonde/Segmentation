@@ -1,1 +1,5 @@
 pytest>=8.0.0
+# Install a CUDA-specific torch wheel separately when GPU acceleration is required.
+torch>=2.2.0
+transformers>=4.40.0
+safetensors>=0.4.0
