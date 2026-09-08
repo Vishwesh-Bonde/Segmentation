@@ -22,8 +22,12 @@ hf_cache/
 *.safetensors
 *.bin
 *.pt
+<<<<<<< HEAD
 *.pth
 
 # Editors
 .idea/
 .vscode/
+=======
+*.pth
+>>>>>>> f8cc56e38cf02ef6b68a67167c29c9c818a54aa5

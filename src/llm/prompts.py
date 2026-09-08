@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 
+<<<<<<< HEAD
 def _format_canonical(questions: dict[str, object]) -> str:
     if not questions:
         return "None supplied."
@@ -79,3 +80,7 @@ def structure_prompt(context: dict[str, object]) -> str:
         + retry_hint + "\n\n"
         "Return JSON only."
     )
+=======
+def structure_prompt(context: dict[str, object]) -> str:
+    return """Return only strict JSON with keys decision, question_id, confidence, reason, requires_human_review.\nAllowed decisions: question_boundary, continuation, subquestion, ordinary_content, header_footer, unmapped, ambiguous.\nNever invent a question ID. This is structural analysis, not grading.\n\nContext:\n""" + str(context)
+>>>>>>> f8cc56e38cf02ef6b68a67167c29c9c818a54aa5

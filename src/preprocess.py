@@ -12,6 +12,7 @@ def normalize_text(text: str) -> str:
     normalized = unicodedata.normalize("NFC", text.replace("\r\n", "\n").replace("\r", "\n"))
     normalized = normalized.replace("\t", " ")
     normalized = re.sub(r"\u00a0+", " ", normalized)
+<<<<<<< HEAD
     normalized = re.sub(
         r"<\|(?:im_[A-Za-z0-9_]*|assistant|user|endoftext)(?:\|>)?",
         "",
@@ -19,6 +20,10 @@ def normalize_text(text: str) -> str:
     )
     normalized = re.sub(r"</?s>", "", normalized)
     normalized = re.sub(r"[ ]{2,}", " ", normalized)
+=======
+    normalized = re.sub(r"[ ]{2,}", " ", normalized)
+    normalized = re.sub(r"(?:<\|im_[^>\n]*>|<\|im_end\|>)", "", normalized)
+>>>>>>> f8cc56e38cf02ef6b68a67167c29c9c818a54aa5
     normalized = re.sub(r"[ \t]+\n", "\n", normalized)
     normalized = re.sub(r"\n{3,}", "\n\n", normalized)
     normalized = normalized.strip()

@@ -12,12 +12,17 @@ class Config:
     output_dir: Path
     logs_dir: Path
     encoding: str = "utf-8"
+<<<<<<< HEAD
+=======
+    question_paper_path: Path | None = None
+>>>>>>> f8cc56e38cf02ef6b68a67167c29c9c818a54aa5
     llm_enabled: bool = False
     llm_model: str = "qwen2.5:3b"
     llm_base_url: str = "http://127.0.0.1:11434/api/generate"
     question_confidence_threshold: float = 0.85
     human_review_threshold: float = 0.60
     max_llm_context: int = 3000
+<<<<<<< HEAD
     max_llm_calls_per_document: int = 64
     max_segmentation_llm_calls_per_document: int = 32
     cache_enabled: bool = True
@@ -30,16 +35,33 @@ class Config:
     exam_id: str = ""
     quantization_4bit: bool = True
     quantization_compute_dtype: str = "float16"
+=======
+    max_llm_calls_per_document: int = 20
+    cache_enabled: bool = True
+    model_path: str = "Qwen/Qwen2.5-1.5B-Instruct"
+    device: str = "auto"
+    max_input_tokens: int = 2048
+    max_new_tokens: int = 256
+    temperature: float = 0.0
+    model_answers_path: Path | None = None
+>>>>>>> f8cc56e38cf02ef6b68a67167c29c9c818a54aa5
 
     @classmethod
     def from_project_root(cls, project_root: str | Path) -> "Config":
         root = Path(project_root)
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8cc56e38cf02ef6b68a67167c29c9c818a54aa5
         return cls(
             project_dir=root,
             input_dir=root / "input",
             output_dir=root / "output",
             logs_dir=root / "logs",
+<<<<<<< HEAD
+=======
+            question_paper_path=root / "question_paper.txt",
+>>>>>>> f8cc56e38cf02ef6b68a67167c29c9c818a54aa5
             llm_enabled=False,
             model_answers_path=root / "model_answers.md",
         )
@@ -47,6 +69,7 @@ class Config:
     @classmethod
     def from_environment(cls, project_root: str | Path) -> "Config":
         base = cls.from_project_root(project_root)
+<<<<<<< HEAD
 
         return cls(
             **{
@@ -139,3 +162,24 @@ class Config:
 DEFAULT_CONFIG = Config.from_environment(
     Path(__file__).resolve().parent.parent
 )
+=======
+        return cls(
+            **{**base.__dict__,
+               "llm_enabled": os.getenv("LLM_ENABLED", "false").lower() in {"1", "true", "yes"},
+               "llm_model": os.getenv("LLM_MODEL", base.llm_model),
+               "llm_base_url": os.getenv("LLM_BASE_URL", base.llm_base_url),
+               "question_confidence_threshold": float(os.getenv("QUESTION_CONFIDENCE_THRESHOLD", base.question_confidence_threshold)),
+               "human_review_threshold": float(os.getenv("HUMAN_REVIEW_THRESHOLD", base.human_review_threshold)),
+               "max_llm_context": int(os.getenv("MAX_LLM_CONTEXT", base.max_llm_context)),
+               "max_llm_calls_per_document": int(os.getenv("MAX_LLM_CALLS_PER_DOCUMENT", base.max_llm_calls_per_document)),
+               "cache_enabled": os.getenv("CACHE_ENABLED", "true").lower() in {"1", "true", "yes"},
+               "model_path": os.getenv("LLM_MODEL_PATH", base.model_path),
+               "device": os.getenv("LLM_DEVICE", base.device),
+               "max_input_tokens": int(os.getenv("LLM_MAX_INPUT_TOKENS", base.max_input_tokens)),
+               "max_new_tokens": int(os.getenv("LLM_MAX_NEW_TOKENS", base.max_new_tokens)),
+               "temperature": float(os.getenv("LLM_TEMPERATURE", base.temperature)),}
+        )
+
+
+DEFAULT_CONFIG = Config.from_environment(Path(__file__).resolve().parent.parent)
+>>>>>>> f8cc56e38cf02ef6b68a67167c29c9c818a54aa5

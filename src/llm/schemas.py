@@ -1,11 +1,15 @@
 from __future__ import annotations
 
 import json
+<<<<<<< HEAD
 import re
+=======
+>>>>>>> f8cc56e38cf02ef6b68a67167c29c9c818a54aa5
 
 from src.models import StructuredLLMResult
 
 
+<<<<<<< HEAD
 def coerce_bool_string(value: object) -> bool | None:
     """Coerce a JSON bool, a 'true'/'false' string, or a numeric 1/0 into a bool."""
     if isinstance(value, bool):
@@ -81,3 +85,15 @@ def parse_llm_json(value: str) -> StructuredLLMResult:
         subject_match=subject_match,
         raw_response=value,
     )
+=======
+def parse_llm_json(value: str) -> StructuredLLMResult:
+    data = json.loads(value)
+    return StructuredLLMResult(
+        decision=data.get("decision", "ambiguous"),
+        question_id=data.get("question_id"),
+        confidence=data.get("confidence", 0.0),
+        reason=str(data.get("reason", "")),
+        requires_human_review=bool(data.get("requires_human_review", False)),
+        raw_response=value,
+    )
+>>>>>>> f8cc56e38cf02ef6b68a67167c29c9c818a54aa5
