@@ -1,0 +1,29 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+.env
+*.log
+
+# Sensitive OCR data and generated results
+input/*
+output/*
+logs/*
+!input/.gitkeep
+!output/.gitkeep
+!logs/.gitkeep
+
+# Local model downloads and caches
+.cache/
+.huggingface/
+huggingface_cache/
+hf_cache/
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# Editors
+.idea/
+.vscode/

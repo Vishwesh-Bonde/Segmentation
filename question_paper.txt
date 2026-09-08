@@ -1,0 +1,7 @@
+## Q1. Explain Data Structures and classify them into Linear and Non-Linear Data Structures. Give suitable examples. [10 Marks]
+
+## Q2. Define an Algorithm. Explain the characteristics of a good algorithm. [10 Marks]
+
+## Q3. What is Complexity Analysis? Explain Time Complexity and Space Complexity. Also explain Best, Average and Worst Case analysis. [10 Marks]
+
+## Q4. Explain Array and Linked List. Compare them based on memory allocation, access, insertion/deletion and size. [10 Marks]
