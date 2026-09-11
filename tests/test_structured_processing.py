@@ -1,5 +1,4 @@
 from src.answer_processor import AnswerProcessor
-<<<<<<< HEAD
 from src.config import Config, DEFAULT_CONFIG
 from src.question_paper import parse_question_paper
 from src.llm.client import LocalLLMClient
@@ -89,19 +88,12 @@ class StudentFiveSemanticLLM:
             False,
             True,
         )
-=======
-from src.config import DEFAULT_CONFIG
-from src.question_paper import parse_question_paper
-from src.llm.client import LocalLLMClient
-from src.models import StructuredLLMResult
->>>>>>> f8cc56e38cf02ef6b68a67167c29c9c818a54aa5
 
 
 PAPER = parse_question_paper("1. Define Python. [5 Marks] 2. Explain algorithms. [5] 4. Explain lists. [10]")
 
 
 def process(text):
-<<<<<<< HEAD
     return AnswerProcessor(DEFAULT_CONFIG, llm=FakeSemanticLLM()).process("student", text, PAPER, "question_paper.txt")
 
 
@@ -112,28 +104,12 @@ def test_year_and_numbered_list_stay_in_answer():
     assert "1991" in answer
     assert "1. Input" in answer
     assert "Q1991" not in answer
-=======
-    return AnswerProcessor(DEFAULT_CONFIG).process("student", text, PAPER, "question_paper.txt")
-
-
-def test_year_and_numbered_list_stay_in_answer():
-    result = process("Q1. Python was released in 1991.\n1. Input\n2. Output\nQ2. Algorithms are finite.")
-    answer = result.questions["Q1"]["student_answer"]["text"]
-    assert "1991" in answer
-    assert "1. Input" in answer
-    assert "Q1991" not in result.questions
->>>>>>> f8cc56e38cf02ef6b68a67167c29c9c818a54aa5
 
 
 def test_non_sequential_markers_are_preserved():
     result = process("Q1. Python answer.\nQ4. List answer.\nQ2. Algorithm answer.")
-<<<<<<< HEAD
     answered = {question_id for question_id, value in result.questions.items() if value is not None}
     assert answered == {"Q1", "Q2", "Q4"}
-=======
-    answers = [item["student_answer"] for item in result.questions.values() if item["student_answer"]]
-    assert [answer["detected_marker"] for answer in sorted(answers, key=lambda value: value["source_order"])] == ["Q1", "Q4", "Q2"]
->>>>>>> f8cc56e38cf02ef6b68a67167c29c9c818a54aa5
 
 
 def test_paper_marks_and_multiline_text():
@@ -144,13 +120,8 @@ def test_paper_marks_and_multiline_text():
 
 def test_page_figure_table_do_not_create_boundaries():
     result = process("Python was created in 1991.\nFigure 3.2 shows it.\nTable 4.1 contains data.\nPage 12.")
-<<<<<<< HEAD
     assert "Figure 3.2" in str(result.questions["Q1"])
     assert result.review == []
-=======
-    assert not result.questions["Q1"]["student_answer"]
-    assert result.review_items
->>>>>>> f8cc56e38cf02ef6b68a67167c29c9c818a54aa5
 
 
 def test_model_answer_headings_are_canonical_questions():
@@ -161,17 +132,12 @@ def test_model_answer_headings_are_canonical_questions():
 
 
 def test_disabled_llm_is_explicit_review_fallback():
-<<<<<<< HEAD
     client = LocalLLMClient(replace(DEFAULT_CONFIG, llm_enabled=False))
-=======
-    client = LocalLLMClient(DEFAULT_CONFIG)
->>>>>>> f8cc56e38cf02ef6b68a67167c29c9c818a54aa5
     result = client.analyze_structure({"canonical_questions": {"Q1": "Define Python"}, "student": "text"})
     assert isinstance(result, StructuredLLMResult)
     assert result.requires_human_review is True
 
 
-<<<<<<< HEAD
 def test_model_answers_are_the_single_source_of_truth():
     questions = parse_model_answers(DEFAULT_CONFIG.model_answers_path)
     assert list(questions)[:4] == ["Q1", "Q2", "Q3", "Q4"]
@@ -183,14 +149,11 @@ def test_model_answers_are_the_single_source_of_truth():
     assert "Q1" in model_answers and "Q2" in model_answers and "Q4" in model_answers
 
 
-=======
->>>>>>> f8cc56e38cf02ef6b68a67167c29c9c818a54aa5
 def test_invalid_llm_json_is_rejected():
     from src.llm.schemas import parse_llm_json
     import pytest
     with pytest.raises(ValueError):
         parse_llm_json("not json")
-<<<<<<< HEAD
 
 
 def test_nonnumeric_confidence_is_reviewable():
@@ -581,5 +544,3 @@ def test_adjacent_weak_same_question_blocks_are_merged():
     assert "► Array" in q4
     assert "Size" in q4
     assert result.unmapped == []
-=======
->>>>>>> f8cc56e38cf02ef6b68a67167c29c9c818a54aa5

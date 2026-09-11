@@ -10,10 +10,6 @@ class Question:
     question_text: str
     max_marks: int | None = None
     model_answer: str | None = None
-<<<<<<< HEAD
-=======
-    model_answer: str | None = None
->>>>>>> f8cc56e38cf02ef6b68a67167c29c9c818a54aa5
 
 
 @dataclass(frozen=True)
@@ -33,10 +29,7 @@ class StructuredLLMResult:
     confidence: float
     reason: str
     requires_human_review: bool = False
-<<<<<<< HEAD
     subject_match: bool | None = None
-=======
->>>>>>> f8cc56e38cf02ef6b68a67167c29c9c818a54aa5
     raw_response: str | None = None
 
 
@@ -55,7 +48,6 @@ class AnswerBlock:
 @dataclass
 class ProcessingResult:
     student: str
-<<<<<<< HEAD
     questions: dict[str, str | list[str] | None]
     review: list[dict[str, object]] = field(default_factory=list)
     unmapped: list[str] = field(default_factory=list)
@@ -107,12 +99,3 @@ class ProcessingResult:
             "processed_text": self.processed_text,
             "normalized_text": self.normalized_text,
         }
-=======
-    question_paper: str | None
-    questions: dict[str, dict[str, object]]
-    unmapped_content: list[dict[str, object]] = field(default_factory=list)
-    review_items: list[dict[str, object]] = field(default_factory=list)
-    processing_status: str = "success"
-    raw_text: str = ""
-    normalized_text: str = ""
->>>>>>> f8cc56e38cf02ef6b68a67167c29c9c818a54aa5
