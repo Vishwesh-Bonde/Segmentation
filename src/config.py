@@ -13,7 +13,7 @@ class Config:
     logs_dir: Path
     encoding: str = "utf-8"
     llm_enabled: bool = False
-    llm_model: str = "qwen2.5:3b"
+    llm_model: str = "ibm-granite/granite-3.3-2b-instruct"
     llm_base_url: str = "http://127.0.0.1:11434/api/generate"
     question_confidence_threshold: float = 0.85
     human_review_threshold: float = 0.60
